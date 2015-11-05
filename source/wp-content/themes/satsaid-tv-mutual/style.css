@@ -7,3 +7,14 @@ Text Domain: satsaid-tv-mutual
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+
+
+
+.navbar-brand img{
+	height: 100%;
+}
+
+.vertical-line {
+    border-left: thick solid #ff0000;
+}

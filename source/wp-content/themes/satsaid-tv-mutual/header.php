@@ -6,7 +6,8 @@
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
         <?php wp_head(); ?>
     </head>
-
+	
+	<nav class="navbar navbar-default"></nav>
     <nav id="site-navigation" class="navbar navbar-default navbar-fixed-top" role="navigation">
 	  <div class="container">  
 	    <div class="navbar-header">
@@ -18,17 +19,26 @@
 	      </button>
 	      <a class="navbar-brand" href="#"><img src="<? echo THEME_URL; ?>/imgs/logo.png"></a>
 	    </div>
-	  <!--<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_s' ); ?></a>-->
+	  
 	  <div id="main-navbar-collapse" class="collapse navbar-collapse">
 		  
 
-
+			
 		  <ul class="nav navbar-nav pull-right">
-		    	<li><a href="#"><i class="fa-search fa pull-right"></i></a></li>
+		    	<li><a href="#"><i class="fa-search fa pull-right open-search-overlay"></i></a></li>
 		    	<li><a href="#"><i class="fa-facebook fa pull-right"></i></a></li>
 		   </ul>
 
+		   
+			<!-- Overlay Search Form -->
+		   <div class="overlay overlay-data">
+		      <button type="button" class="overlay-close"><i class="fa fa-close fa-x5"></i></button>
+		      <?php get_search_form(true); ?>
+		    </div>
 
+			
+
+			<!-- Menu Secundario -->
 		  <?php wp_nav_menu( array( 
 		  	'theme_location' 	  => 'secundary',
 		  	'container' 		    => '',
@@ -46,7 +56,8 @@
 		  	'depth'           	=> 0,
 		  	'walker'          	=> ''
 		    )); ?>
-
+			
+			<!-- Menu principal -->
 		    <?php wp_nav_menu( array( 
 		  	'theme_location' 	  => 'primary',
 		  	'container' 		    => '',

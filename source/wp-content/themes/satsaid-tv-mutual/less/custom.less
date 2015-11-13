@@ -1,0 +1,306 @@
+ /*!
+ * LESS Document que compila el archivo custom.css
+ */
+
+
+// Variables de Custom
+@verde-agua: #27AD91;
+
+@verde-agua-claro: #6EC1B1;
+
+@hr-size: 3px;
+
+@form_height: 60px;
+
+a, a:hover, a:focus, *:focus{
+	text-decoration: none;
+	list-style: none;
+	outline: 0;
+}
+
+
+
+// ######################### Menu #######################//
+.navbar-header{
+	width: auto;
+
+	.iconos{
+		.pull-right;
+	}
+}
+
+a.navbar-brand{
+	img{
+		height: 100%;
+	}
+} 
+
+.current_page_item{
+	a{
+		color:@verde-agua-claro !important;
+	}
+	
+}
+
+
+
+
+// ######################### Cuadros ##################### //
+
+#cuadrados-wrapper{
+	.container{
+		.row{
+			a.cuadrados{
+				display: block;
+				color: white;
+				min-height: 230px;
+				padding: 30px;
+
+				:hover{
+					color: white;
+				}
+
+				h3{
+					margin-top: 10px;
+				}
+
+				hr.hr-cuadrados{
+					margin-top: 20px;
+				    margin-bottom: 20px;
+				    border: 8px;
+				    border-top: 3px solid white;
+
+				}
+			}
+
+			
+			.cuadrados:nth-of-type(1){
+				background-color: @verde-agua;
+			}
+			.cuadrados:nth-of-type(2){
+				background-color: @verde-agua-claro;
+			}
+			.cuadrados:nth-of-type(3){
+				background-color: @verde-agua;
+			}
+
+		}
+	}
+}
+
+
+
+/* ##################### Search Form Overlay #########################*/
+
+::-webkit-input-placeholder {
+   color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: @verde-agua-claro;
+  z-index: 999;
+
+  	button.overlay-close {
+	  position: relative;
+	  top: 7%;
+	  display: block;
+	  margin: auto;
+	  background: transparent;
+	  border: 0;
+	  color: white;
+	}
+
+	form{
+		top:15%;
+		margin: auto;
+		display: block;
+		position: relative;
+		width: 525px;
+
+		input[type="text"]{
+			
+		    height: @form_height;
+		    border: 0;
+		    border-bottom: 2px solid white;
+		    background: transparent;
+		    color: white;
+		}
+		
+		
+			
+
+		
+		
+
+		button{
+			height: @form_height;
+		    border: 0;
+		    background: transparent;
+
+		    i{
+		    	color: white;
+		    }
+		}
+	}
+
+}
+
+.overlay-data {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  visibility: 0s 0.5s;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+}
+.overlay-open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+/* ##################### Institucional ######################### */
+
+#institucional{
+
+	h1{
+		color: @verde-agua-claro;
+		margin-left: 20px;
+	}
+	
+	hr.hr-titulo{
+	    margin-top: 20px;
+	    margin-bottom: 20px;
+	    border: 8px;
+	    border-top: @hr-size solid @verde-agua-claro;
+	    padding: 0 20px;
+	}
+
+	img{
+		width: 100%;
+	}
+
+}
+
+/* ##################### Afiliacion ######################### */
+
+
+#afiliacion{
+
+	h1{
+		color: @verde-agua-claro;
+		margin-left: 20px;
+	}
+	
+	hr.hr-titulo{
+	    margin-top: 20px;
+	    margin-bottom: 20px;
+	    border: 8px;
+	    border-top: @hr-size solid @verde-agua-claro;
+	    padding: 0 20px;
+	}
+
+	img{
+		width: 100%;
+	}
+
+	.button_pdf:nth-of-type(1){
+		background: @verde-agua-claro;
+	}
+	.button_pdf:nth-of-type(2){
+		background: @verde-agua;
+	}
+	a.button_pdf{
+		color: white;
+		width: 100%;
+		display: block;
+		height: 80px;
+		margin-bottom: 20px;
+		font-size: 18px;
+		text-align: center;
+		padding: 28px 15px;
+
+	}
+
+}
+
+/* ##################### Locales ######################### */
+
+#locales-adheridos{
+	background: @verde-agua-claro;
+	h1{
+		color: white;
+		margin-left: 20px;
+	}
+	
+	hr.hr-titulo{
+	    margin-top: 20px;
+	    margin-bottom: 20px;
+	    border: 8px;
+	    border-top: @hr-size solid white;
+	    padding: 0 20px;
+	}
+
+	img{
+		width: 100%;
+	}
+
+	h3,h5 a{
+		color: white;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

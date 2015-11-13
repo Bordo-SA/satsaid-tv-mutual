@@ -1,0 +1,120 @@
+ /*!
+ * LESS Document que compila el archivo custom.css
+ */
+
+
+// Variables de Custom
+@verde-agua: rgba(36,185,162,1);
+
+@verde-agua-claro: rgba(36,185,162,.8);
+
+a, a:hover, a:focus{
+	text-decoration: none;
+	list-style: none;
+}
+
+.iconos{
+	.pull-right;
+}
+
+// ######################### Menu #######################//
+.navbar-header{
+	width: auto;
+}
+		a.navbar-brand{
+			img{
+				height: 100%;
+			}
+		} 
+
+
+
+
+// ######################### Cuadros ##################### //
+
+#cuadrados-wrapper{
+	.container{
+		.row{
+			a.cuadrados{
+				display: block;
+				color: white;
+				min-height: 230px;
+
+				:hover{
+					color: white;
+				}
+
+				h3{
+					border-bottom: 3px solid #FFF;
+				}
+			}
+
+			
+			.cuadrados:nth-of-type(1){
+				background-color: @verde-agua;
+			}
+			.cuadrados:nth-of-type(2){
+				background-color: @verde-agua-claro;
+			}
+			.cuadrados:nth-of-type(3){
+				background-color: @verde-agua;
+			}
+
+		}
+	}
+}
+
+
+
+/* ##################### Search Form Overlay #########################*/
+
+
+
+.overlay{
+
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: @verde-agua;
+  z-index: 999;
+
+  	button.overlay-close {
+	  position: relative;
+	  top: 15%;
+	  display: block;
+	  margin: auto;
+	}
+
+	form{
+		top:35%;
+		margin: auto;
+		display: block;
+		position: relative;
+		width: 400px;
+	}
+
+}
+
+.overlay-data {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  visibility: 0s 0.5s;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+}
+.overlay-open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+
+
+

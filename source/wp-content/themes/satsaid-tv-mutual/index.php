@@ -1,21 +1,25 @@
 <?php get_header(); ?>
 
-<?php do_shortcode('[rev_slider alias="home"]'); ?>
+<?php echo do_shortcode('[rev_slider alias="home"]'); ?>
 
 
 
-
-<div class="container">
-	<div class="row">
-		<a class="col-xs-4 bg-verde-agua cuadrados" href="#">
-			<h3>Beneficios TV Mutual</h3>
-		</a>
-		<a class="col-xs-4 bg-verde-agua-claro cuadrados" href="#">
-			<h3>Locales Adheridos</h3>
-		</a>
-		<a class="col-xs-4 bg-verde-agua cuadrados" href="#">
-			<h3>Tienda Online</h3>
-		</a>
+<div id="cuadrados-wrapper">
+	<div class="container">
+		<div class="row">
+			<a class="col-sm-20 col-xs-60 cuadrados" href="#">
+				<h3>Beneficios TV Mutual</h3>
+				<hr class="hr-cuadrados">
+			</a>
+			<a class="col-sm-20 col-xs-60 cuadrados" href="#">
+				<h3>Locales Adheridos</h3>
+				<hr class="hr-cuadrados">
+			</a>
+			<a class="col-sm-20 col-xs-60 cuadrados" href="#">
+				<h3>Tienda Online</h3>
+				<hr class="hr-cuadrados">
+			</a>
+		</div>
 	</div>
 </div>
 

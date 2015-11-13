@@ -3,6 +3,11 @@
 
 //########################################### Definir Directorios #####################################################
 define('THEME_URL', get_template_directory_uri());
+define('LESS_COMPILE', true);
+
+
+require_once 'includes/LessPHP/Less.php';
+
 
 
 //########################################### Borrar Version de Wordpress de la Cabecera #####################################################
@@ -53,15 +58,38 @@ add_action( 'wp_enqueue_scripts', 'mutual_registrar_js' );
 
 function mutual_registrar_css(){
 
+    //LESS COMPILE
+
+    if(LESS_COMPILE){
+
+        //Bootstrap
+        $to_cache = array( dirname(__FILE__).'/less/bootstrap/bootstrap.less' => dirname(__FILE__).'/less/bootstrap/' );
+        Less_Cache::$cache_dir = dirname(__FILE__).'/includes/LessPHP/Cache/';
+        $css_file_name = Less_Cache::Get( $to_cache );
+        copy(dirname(__FILE__).'/includes/LessPHP/Cache/'.$css_file_name, dirname(__FILE__).'/css/bootstrap.min.css');
+
+        //Custom
+        /*
+        $to_cache = array( dirname(__FILE__).'/less/custom.less' => dirname(__FILE__).'/less/' );
+        Less_Cache::$cache_dir = dirname(__FILE__).'/includes/LessPHP/Cache/';
+        $css_file_name = Less_Cache::Get( $to_cache );
+        copy(dirname(__FILE__).'/includes/LessPHP/Cache/'.$css_file_name, dirname(__FILE__).'/css/custom.css');
+*/
+        
+        
+    }
+
     //-----Registrar CSS -----//
 
     //Registrar Estilos
     wp_register_style( 'bootstrap', THEME_URL.'/css/bootstrap.min.css' , array(), null,'all');
+    wp_register_style( 'custom', THEME_URL.'/css/custom.css' , array(), null,'all');
     wp_register_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), null,'all');
     wp_register_style( 'style', THEME_URL.'/style.css', array(), null,'all');
 
     //Activar Estilo
     wp_enqueue_style('bootstrap');
+    //wp_enqueue_style('custom');
     wp_enqueue_style('font-awesome');
     wp_enqueue_style('style');
 
@@ -69,6 +97,9 @@ function mutual_registrar_css(){
 }
 
 add_action( 'wp_enqueue_scripts', 'mutual_registrar_css' );
+
+
+
 
 
 // ###################################### Menu ########################################## //
@@ -94,6 +125,13 @@ function remove_admin_bar() {
 
 }
 
+
+
+// ###################################### Add Page Thums ########################################## //
+function add_page_thumbnails() {
+    add_theme_support( 'post-thumbnails', array('page', 'post', 'locales-adheridos') );
+}
+add_action( 'after_setup_theme', 'add_page_thumbnails' );
 
 
 

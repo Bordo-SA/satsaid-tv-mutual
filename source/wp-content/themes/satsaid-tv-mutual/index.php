@@ -11,7 +11,7 @@
 				<h3>Beneficios TV Mutual</h3>
 				<hr class="hr-cuadrados">
 			</a>
-			<a class="col-sm-20 col-xs-60 cuadrados" href="#">
+			<a class="col-sm-20 col-xs-60 cuadrados" href="http://localhost/GitHub/satsaid-tv-mutual/source/index.php/locales/">
 				<h3>Locales Adheridos</h3>
 				<hr class="hr-cuadrados">
 			</a>

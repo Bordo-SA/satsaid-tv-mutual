@@ -13,7 +13,7 @@
     <hr class="hr-titulo">
 
     <div class="row">
-      <div class="col-md-5"></div>
+      <div class="col-xs-5"></div>
 
       <?php 
          
@@ -36,28 +36,15 @@
 
          foreach ($categories as $category) {?>
 
-            <div class="col-md-10"></div>
-           
+            <div class="col-xs-10"><img src="<?php echo THEME_URL.'/imgs/'.$category->slug.'.jpg'; ?>" alt="">
+              <h4><?php echo $category->name; ?></h4>
+              <h5><a href="<?php echo get_term_link( $category ); ?>">Ver mas >></a></h5>
+           </div>
          <?}
       ?>
-      <div class="col-md-5"></div>
-      <div class="clearfix"></div>
-      <div class="col-md-5"></div>
-        <?php 
-         foreach ($categories as $category) {?>
+      <div class="col-xs-5"></div>
+      
 
-            <div class="col-md-10">
-              <h3><?php echo $category->name; ?></h3>
-              <h5><a href="<?php echo get_term_link( $category ); ?>">Ver mas >></a></h4>
-            </div>
-           
-         <?php
-       }
-      ?>
-
-
-
-      <div class="col-md-5"></div>
     </div>
   </div>
 

@@ -36,6 +36,9 @@ function mutual_registrar_js()
     // Bootstrap
     wp_register_script( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array( 'jquery' ), null, true );
 
+    // Map Contacto
+    wp_register_script( 'map-contacto', THEME_URL.'/js/map-contacto.js', array( 'jquery' ), null, true );
+
     // Custom
     wp_register_script( 'custom', THEME_URL.'/js/custom.js', array( 'jquery' ), null, true );
     
@@ -45,6 +48,13 @@ function mutual_registrar_js()
     wp_enqueue_script( 'jquery' );   
 
     wp_enqueue_script( 'bootstrap' );
+
+    if(is_page('contacto')){
+
+        wp_enqueue_script('googlemaps','http://maps.google.cn/maps/api/js',array('jquery'), null, true);
+        wp_enqueue_script( 'map-contacto' ); 
+
+    }
    
     wp_enqueue_script( 'custom' ); 
 }
@@ -129,7 +139,7 @@ function remove_admin_bar() {
 
 // ###################################### Add Page Thums ########################################## //
 function add_page_thumbnails() {
-    add_theme_support( 'post-thumbnails', array('page', 'post', 'locales-adheridos') );
+    add_theme_support( 'post-thumbnails', array('page', 'post', 'locales-adheridos', 'beneficio') );
 }
 add_action( 'after_setup_theme', 'add_page_thumbnails' );
 

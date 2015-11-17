@@ -2,6 +2,7 @@
  * LESS Document que compila el archivo custom.css
  */
 
+@import url(https://fonts.googleapis.com/css?family=Carme);
 
 // Variables de Custom
 @verde-agua: #27AD91;
@@ -18,15 +19,46 @@ a, a:hover, a:focus, *:focus{
 	outline: 0;
 }
 
-
+*{
+	font-family: 'Carme', sans-serif;
+}
 
 // ######################### Menu #######################//
 .navbar-header{
 	width: auto;
+	.iconos{
+	 @media (max-width: @screen-sm-min) {
+	 	
+		.pull-right;
+		display: block;
+	  }
+	  @media (min-width: @screen-sm-min) {
+	  	.pull-right;
+	    display: none;
+	  }
+		
+	}
+
+}
+
+.navbar-collapse{
+
+	.collapse-container{
+		  @media (min-width: @screen-sm-min) {
+		  	.pull-right;
+		  }
+	}
 
 	.iconos{
-		.pull-right;
+	 @media (max-width: @screen-sm-min) {
+	 	display: none;
+	  }
+	  @media (min-width: @screen-sm-min) {
+	    display: block;
+	  }
+		
 	}
+
 }
 
 a.navbar-brand{
@@ -50,11 +82,33 @@ a.navbar-brand{
 #cuadrados-wrapper{
 	.container{
 		.row{
+				@media (max-width: @screen-sm-min) {
+				 	    margin-top: 20px;
+				  }
+
+			 @media (min-width: @screen-sm-min) {
+				 	    margin-top: -40px;
+				  }
+
+			 @media (min-width: @screen-md-min) {
+				 	    margin-top: -60px;
+				  }
+			 @media (min-width: @screen-lg-min) {
+				 	    margin-top: -80px;
+				  }
 			a.cuadrados{
 				display: block;
 				color: white;
+
 				min-height: 230px;
 				padding: 30px;
+
+				@media (max-width: @screen-sm-min) {
+				 	min-height: 60px;
+				 	padding: 10px 30px;
+				  }
+
+				 
 
 				:hover{
 					color: white;
@@ -62,13 +116,21 @@ a.navbar-brand{
 
 				h3{
 					margin-top: 10px;
+					font-weight: normal;
+					@media (max-width: @screen-sm-min) {
+					 	font-size: 16px;
+					 	margin-top: 5px;
+					  }
 				}
 
 				hr.hr-cuadrados{
 					margin-top: 20px;
 				    margin-bottom: 20px;
 				    border: 8px;
-				    border-top: 3px solid white;
+				    border-top: 1px solid white;
+				    @media (max-width: @screen-sm-min) {
+					 	margin-top: 10px;
+					  }
 
 				}
 			}
@@ -113,7 +175,7 @@ a.navbar-brand{
   top: 0;
   left: 0;
   background: @verde-agua-claro;
-  z-index: 999;
+  z-index: 9999;
 
   	button.overlay-close {
 	  position: relative;
@@ -130,7 +192,14 @@ a.navbar-brand{
 		margin: auto;
 		display: block;
 		position: relative;
-		width: 525px;
+		padding: 30px;
+
+		@media (max-width: @screen-sm-min) {
+				width:100%;
+			  }
+	  	@media (min-width: @screen-sm-min) {
+				width:525px;
+		  }
 
 		input[type="text"]{
 			
@@ -243,11 +312,19 @@ a.navbar-brand{
 /* ##################### Locales ######################### */
 
 #locales-adheridos{
-	background: @verde-agua-claro;
+	.container{
+		background: @verde-agua-claro;
+		.row div{
+			padding: 0;
+		}
+	}
+	
 	h1{
 		color: white;
 		margin-left: 20px;
 	}
+
+	
 	
 	hr.hr-titulo{
 	    margin-top: 20px;
@@ -261,13 +338,73 @@ a.navbar-brand{
 		width: 100%;
 	}
 
-	h3,h5 a{
+	h3,h4,h5 a{
 		color: white;
+	}
+
+	h4{
+		@media (max-width: @screen-sm-min) {
+				font-size: 12px;
+			  }
+		@media (max-width: @screen-xs-min) {
+				font-size: 8px;
+			  }
+
+	}
+
+	h5{
+		@media (max-width: @screen-sm-min) {
+				font-size: 10px;
+			  }
+		@media (max-width: @screen-xs-min) {
+				font-size: 6px;
+			  }
+
 	}
 
 }
 
 
+/* ##################### Contacto ######################### */
+
+#contacto{
+	.container{
+		background: @verde-agua-claro;
+		
+	}
+	
+	h1{
+		color: white;
+		margin-left: 20px;
+	}
+
+	
+	
+	hr.hr-titulo{
+	    margin-top: 20px;
+	    margin-bottom: 20px;
+	    border: 8px;
+	    border-top: @hr-size solid white;
+	    padding: 0 20px;
+	}
+
+
+	h4, h5{
+		color: white;
+	}
+
+	textarea, input{
+		color:@gray;
+		width: 100%;
+	}
+
+	#map-canvas{
+		width: 100%;
+
+		height: 400px;
+	}
+
+}
 
 
 

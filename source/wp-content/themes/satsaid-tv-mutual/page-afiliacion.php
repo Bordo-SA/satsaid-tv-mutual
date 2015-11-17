@@ -12,7 +12,7 @@
 				<hr class="hr-titulo">
 
 				<div class="row">
-					<div class="col-md-15">
+					<div class="col-md-20 col-sm-25">
 						
 						<a href="#" class="button_pdf descargar_pdf">Descargar Pdf Para Imprimir</a>
 
@@ -23,7 +23,7 @@
 						</div>
 
 					</div>
-					<div class="col-md-30 col-md-offset-15"><?php 
+					<div class="col-md-30 col-md-offset-10 col-sm-30 col-sm-offset-5"><?php 
 
 						if ( has_post_thumbnail() ) {
 							$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>

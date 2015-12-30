@@ -93,7 +93,7 @@
 				    )); ?>
 			
 				<a class="navbar-brand  iconos" href="#"><i class="fa-search fa open-search-overlay"></i></a>
-				<a class="navbar-brand  iconos" href="#"><i class="fa-facebook fa "></i></a>
+				<a class="navbar-brand  iconos" href="https://www.facebook.com/tvmutual" target="_blank"><i class="fa-facebook fa "></i></a>
 			
 
 
